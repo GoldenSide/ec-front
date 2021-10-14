@@ -1,0 +1,127 @@
+#app {
+  .section-container {
+    // 侧边栏 Sidebar container
+    height: 100vh;
+    .sidebar-container {
+      transition: width 0.28s;
+      height: 100%;
+      z-index: 1001;
+      overflow: hidden;
+      //reset element-ui css
+      .horizontal-collapse-transition {
+        transition: 0s width ease-in-out, 0s padding-left ease-in-out,
+          0s padding-right ease-in-out;
+      }
+      .el-scrollbar {
+        height: 100%;
+        .scrollbar-wrapper {
+          overflow-x: hidden !important;
+          height: 100%;
+          .el-scrollbar__view {
+            height: 100%;
+            background-color: rgb(48, 65, 86);
+          }
+        }
+      }
+
+      .el-scrollbar__bar.is-vertical {
+        right: 0px;
+      }
+
+      .is-horizontal {
+        display: none;
+      }
+
+      a {
+        display: inline-block;
+        width: 100%;
+      }
+
+      .svg-icon {
+        margin-right: 16px;
+      }
+
+      .el-menu {
+        // border: none;
+        background-color: transparent !important;
+        width: 100% !important;
+      }
+      .el-submenu__title {
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+      }
+      // menu hover
+      .submenu-title-noDropdown,
+      .el-submenu__title {
+        &:hover {
+          background-color: #182188 !important;
+        }
+      }
+      .is-opened > .el-submenu__title {
+        // color: $subMenuActiveText !important;
+        .svg-icon,
+        span {
+          font-weight: 600;
+        }
+      }
+      // 二级菜单 标题
+      .el-submenu {
+        .el-submenu__title {
+          min-width: 100% !important;
+          background-color: #304156 !important;
+          box-sizing: border-box;
+          &:hover {
+            background-color: rgb(38, 52, 69) !important;
+          }
+        }
+        .el-menu {
+          .menu-wrapper {
+            .el-menu-item {
+              min-width: 100% !important;
+              background-color: #1f2d3d !important;
+              box-sizing: border-box;
+              &:hover {
+                background-color: #001528 !important;
+              }
+            }
+          }
+        }
+      }
+
+      // & .el-submenu .el-menu-item {
+      //   &.is-active {
+      //     position: relative;
+      //     background-color: #edeeee !important;
+      //     color: #141e77 !important;
+      //     font-weight: 500;
+      //     &::before {
+      //       content: "";
+      //       position: absolute;
+      //       left: 0;
+      //       top: 0;
+      //       bottom: 0;
+      //       width: 3px;
+      //       background-color: #141e77;
+      //       border-radius: 0 4px 4px 0;
+      //     }
+      //   }
+      // }
+    }
+    // 主体区域 Main container
+    .main-container {
+      // min-height: 100%;
+      min-height: calc(100vh - 60px);
+      overflow-y: scroll;
+      overflow-x: hidden;
+      transition: margin-left 0.28s;
+      position: relative;
+      box-sizing: border-box;
+      max-width: 100%;
+      padding: 12px 20px;
+      background-color: #f7f8fa;
+    }
+  }
+
+
+}
